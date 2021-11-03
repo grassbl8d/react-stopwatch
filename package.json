@@ -1,6 +1,6 @@
 {
   "name": "react-stopwatch",
-  "homepage": "https://third774.github.io/react-stopwatch",
+  "homepage": "https://grassbl8d.github.io/react-stopwatch",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -96,7 +96,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0",
+    "gh-pages": "^1.2.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "uglifyjs-webpack-plugin": "^1.3.0"
