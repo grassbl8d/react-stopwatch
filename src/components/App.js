@@ -44,7 +44,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="app__title">React Stopwatch</h1>
+        <h1 className="app__title">{this.props.taskName}</h1>
         <Timer label={'Total'} time={this.state.totalTime} />
         <StopwatchControls />
         <Lap label={`Lap #${this.props.laps.length + 1}`} time={this.state.currentLapTime} />
