@@ -5,12 +5,16 @@ import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { configureStore } from './store/store';
-
+const queryString = require('query-string');
 const store = configureStore();
+
+alert(window.location.search);
+const parsed = queryString.parse(window.location.search);
+console.log(parsed)
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <App taskName={parsed.taskName}/>
     </Provider>
     , document.getElementById('root'));
 registerServiceWorker();
