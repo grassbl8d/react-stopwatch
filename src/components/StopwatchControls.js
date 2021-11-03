@@ -8,10 +8,13 @@ export class StopwatchControls extends Component {
 
   componentDidMount() {
     const { started, dispatch, reset} = this.props;
-    if(reset) {
+    if(reset === true) {
       dispatch(resetTimer())
+      dispatch(startTimer(convertToCentiSeconds(Date.now())))
     }
-    dispatch(startTimer(convertToCentiSeconds(Date.now())))
+    if(!started) {
+      dispatch(startTimer(convertToCentiSeconds(Date.now())))
+    }
   }
 
   render() {

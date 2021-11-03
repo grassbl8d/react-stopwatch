@@ -42,11 +42,17 @@ class App extends Component {
   }
 
   render() {
+    const {reset} = this.props;
+    let boolreturn = false;
+    if(reset) {
+      boolreturn = true;
+    }
+    
     return (
       <div className="App">
         <h1 className="app__title">{this.props.taskName}</h1>
         <Timer label={'Total'} time={this.state.totalTime} />
-        <StopwatchControls />
+        <StopwatchControls reset={boolreturn}/>
         <Lap label={`Lap #${this.props.laps.length + 1}`} time={this.state.currentLapTime} />
         <LapList />
         <a className="app__github" target="_blank" href="https://github.com/third774/react-stopwatch"><FontAwesome name="github" size='2x'/></a>
