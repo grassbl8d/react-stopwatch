@@ -9,11 +9,10 @@ const queryString = require('query-string');
 const store = configureStore();
 
 const parsed = queryString.parse(window.location.search);
-console.log(parsed)
 
 ReactDOM.render(
     <Provider store={store}>
-        <App taskName={parsed.taskName}/>
+        <App taskName={parsed.taskName} reset = {parsed.reset}/>
     </Provider>
     , document.getElementById('root'));
 registerServiceWorker();

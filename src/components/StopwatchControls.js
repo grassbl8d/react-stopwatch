@@ -7,7 +7,10 @@ import { convertToCentiSeconds } from '../helpers/helpers';
 export class StopwatchControls extends Component {
 
   componentDidMount() {
-    const { started, dispatch } = this.props;
+    const { started, dispatch, reset} = this.props;
+    if(reset) {
+      dispatch(resetTimer())
+    }
     dispatch(startTimer(convertToCentiSeconds(Date.now())))
   }
 
