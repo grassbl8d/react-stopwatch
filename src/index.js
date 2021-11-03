@@ -8,7 +8,6 @@ import { configureStore } from './store/store';
 const queryString = require('query-string');
 const store = configureStore();
 
-alert(window.location.search);
 const parsed = queryString.parse(window.location.search);
 console.log(parsed)
 
